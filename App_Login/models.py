@@ -44,7 +44,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     USERNAME_FIELD = 'email'
     objects = MyUserManager()
 
-    def _str_(self):
+    def __str__(self):
         return self.email 
     
     def get_full_name(self):
@@ -64,7 +64,7 @@ class Profile(models.Model):
     phone = models.CharField(max_length=20, blank=True)
     date_joined = models.DateTimeField(auto_now_add=True)
 
-    def _str_(self):
+    def __str__(self):
         return self.username + "'s Profile"
 
     def is_fully_filled(self):
