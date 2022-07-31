@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'App_Order',
     'App_Payment',
     'crispy_forms',
+    'sslcommerz_sdk.contrib.django_app',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
